@@ -1,0 +1,88 @@
+:root {
+    --cyan: hsl(178, 100%, 50%);
+}
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    color: hsl(0, 0%, 100%);
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(217, 54%, 11%);
+}
+
+.container {
+    width: 350px;
+    padding: 30px;
+    background-color: hsl(216, 50%, 16%);
+    border-radius: 15px;
+}
+
+.image_eth {
+    width: 350px;
+    border-radius: 10px;
+}
+
+.eth {
+    display: flex;
+    justify-content: space-between;
+}
+
+.eth div {
+    display: flex;
+    align-items: center;
+}
+
+svg {
+    margin-right: 7px;
+}
+
+hr {
+    border: 1px solid hsl(215, 32%, 27%);
+}
+
+h1 {
+    font-size: 25px;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+h1:hover {
+    color: var(--cyan);
+}
+
+.container p {
+    font-size: 18px;
+    color: hsl(215, 51%, 70%);
+}
+
+.eth .cyan_eth {
+    color: var(--cyan);
+    font-weight: 600;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user_img {
+    margin-right: 10px;
+    width: 40px;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+
+a {
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--cyan);
+}
