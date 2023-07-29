@@ -2,14 +2,16 @@
     --cyan: hsl(178, 100%, 50%);
 }
 
+/* niby tutaj chcemy zawsze m0 p0, box-sizing: border-box zeby miec kontrole nad wszystkim */
 * {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Outfit', sans-serif;
     color: hsl(0, 0%, 100%);
 }
 
 body {
     height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color: hsl(217, 54%, 11%);
@@ -22,9 +24,34 @@ body {
     border-radius: 15px;
 }
 
-.image_eth {
-    width: 350px;
+.container .main_image {
+    position: relative;
+}
+
+.container .main_image div {
+    width: 100%;
+    height: 100%;
+    top: 0;
     border-radius: 10px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(178, 100%, 50%, 50%);
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.container .main_image div:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.image_eth {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
 }
 
 .eth {
@@ -37,7 +64,7 @@ body {
     align-items: center;
 }
 
-svg {
+.container img {
     margin-right: 7px;
 }
 
@@ -84,5 +111,18 @@ a {
 }
 
 a:hover {
+    color: var(--cyan);
+}
+
+.attribution {
+    margin-top: 30px;
+}
+
+.attribution a {
+    color: rgb(231, 111, 249);
+    transition: color 0.3s;
+}
+
+.attribution a:hover {
     color: var(--cyan);
 }
